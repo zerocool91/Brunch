@@ -1,0 +1,37 @@
+@import setup/_
+
+header
+	position: absolute
+	width: 100%
+	top: 20px
+	.wrapper
+		+wrapper(1085px)
+		+flex-justify
+		+headerFontStyles
+	
+	nav ul
+		display: flex
+		list-style: none
+		margin: 0
+		padding: 0
+		margin-right: -13px
+		a
+			+headerFontStyles
+			text-decoration: none
+			padding: 13px
+
+.hero
+	background-image: url(../img/hero-bg.png)
+	background-size: cover
+	height: 1000px
+	+flex-centered
+
+	.main-title
+		+wrapper(758px)
+		background-color: rgba(#fff, 0.82)
+		text-align: center
+		padding: 120px 0
+		.section-title
+			font-size: $fsMainTitle
+			.beauty-title
+				font-size: $fsBeautyTitle
