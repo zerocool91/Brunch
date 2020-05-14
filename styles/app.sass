@@ -3,7 +3,7 @@
 header
 	position: absolute
 	width: 100%
-	top: 20px
+	top: 54px
 	.wrapper
 		+wrapper(1085px)
 		+flex-justify
@@ -17,12 +17,14 @@ header
 		margin-right: -13px
 	
 	a
-			+headerFontStyles
-			text-decoration: none
-			padding: 13px
-			transition: color 0.3s ease-in-out
-			&:hover
-				color: darken(#fff, 0.35)
+		+headerFontStyles
+		text-decoration: none
+		padding: 11.15px
+		transition: color 0.3s ease-in-out
+		&:hover
+			color: darken(#fff, 0.35)
+	.logo a
+		padding: 0
 
 .hero
 	background-image: url(../img/hero-bg.png)
@@ -35,11 +37,12 @@ header
 		+wrapper(758px)
 		background-color: rgba(#fff, 0.82)
 		text-align: center
-		padding: 120px 0
+		padding: 119px 0
 		.section-title
 			font-size: $fsMainTitle
 			.beauty-title
 				font-size: $fsBeautyTitle	
+				color: #2c3a42
 	
 	&-button
 		display: inline-block
@@ -50,7 +53,6 @@ header
 		color: #26363a
 		background: #ffffff
 		padding: 16px 25px
-		margin-top: 28px
 		transition: background, color 0.3s ease-in-out
 		&:hover
 			background: #26363a
@@ -58,10 +60,11 @@ header
 
 .cta
 	background-color: $colorContent
-	padding: 70/16*1rem 20/16*1rem 65/16*1rem 
+	padding: 70/16*1rem 20/16*1rem 62/16*1rem 
 	.wrapper
-		+wrapper(1163px)
+		+wrapper(1242px)
 		+flex-justify
+		justify-content: start
 	.large-6
 		max-width: 553px
 		color: #fff
@@ -72,7 +75,7 @@ header
 			font-size: $fsContent
 			line-height: 33.33 /19*1em //19px размер шрифта из макета
 	.image
-		margin-left: 15px
+		margin-left: 83px
 		max-width: 527px
 		img
 			width: 100%
@@ -80,7 +83,7 @@ header
 
 .new-tastes
 	background: rgba(#fff, 0.8)
-	padding: 98/16*1rem 20/16*1rem
+	padding: 96/16*1rem 20/16*1rem 85/16*1rem
 	position: relative
 	&::before
 		content: ''
@@ -109,15 +112,16 @@ header
 		&-title
 			font-size: $fsContent
 			line-height: 33.24 /19*1em
+			margin: 16/19*1em 0 21/19*1em
 		&-content
 			font-size: $fsSmallContent
 			line-height: 24.93 /17*1em
 
-.cards
+.cards				//код выглядит сумбурно, но работает прикольно
 	padding: 88/16*1rem 20/16*1rem
 	background-image: url(../img/cards-bg.png)
 	background-size: cover
-	background-position: center
+	background-position: top center
 	.wrapper
 		+wrapper(1080px)
 		background: rgba(#fff, 0.82)
@@ -125,6 +129,37 @@ header
 	.section-title
 		text-align: center
 		margin: 54px 0
+	&-item
+		display: flex
+	.reverse
+		flex-direction: row-reverse
+	.card-container
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		img
+			width: 100%
+			height: 100%
+		.card
+			max-width: 270px - 104px
+			height: 275 /16*1rem
+			+flex-centered
+			flex-direction: column
+			text-align: center
+			padding: 0 52px
+			color: $colorSecondaryContent
+			&-image
+				max-width: 270px
+				padding: 0
+			&-title
+				font-size: $fsCardTitle
+				text-transform: uppercase
+			&-content
+				font-size: $fsSmallContent
+			&-price
+				font-size: 1rem
+				font-weight: 700
+				text-transform: uppercase
 	
 
 
