@@ -15,15 +15,20 @@ header
 		margin: 0
 		padding: 0
 		margin-right: -13px
-		a
+	
+	a
 			+headerFontStyles
 			text-decoration: none
 			padding: 13px
+			transition: color 0.3s ease-in-out
+			&:hover
+				color: darken(#fff, 0.35)
 
 .hero
 	background-image: url(../img/hero-bg.png)
 	background-size: cover
-	height: 1000px
+	background-position: center
+	height: 1000 /16*1rem
 	+flex-centered
 
 	.main-title
@@ -34,4 +39,93 @@ header
 		.section-title
 			font-size: $fsMainTitle
 			.beauty-title
-				font-size: $fsBeautyTitle
+				font-size: $fsBeautyTitle	
+	
+	&-button
+		display: inline-block
+		text-decoration: none
+		font-size: $fsHeroButton
+		font-weight: 600
+		text-transform: uppercase
+		color: #26363a
+		background: #ffffff
+		padding: 16px 25px
+		margin-top: 28px
+		transition: background, color 0.3s ease-in-out
+		&:hover
+			background: #26363a
+			color: #fff
+
+.cta
+	background-color: $colorContent
+	padding: 70/16*1rem 20/16*1rem 65/16*1rem 
+	.wrapper
+		+wrapper(1163px)
+		+flex-justify
+	.large-6
+		max-width: 553px
+		color: #fff
+		.small-title
+			font-size: $fsSmallTitle
+			font-weight: 700
+		.content
+			font-size: $fsContent
+			line-height: 33.33 /19*1em //19px размер шрифта из макета
+	.image
+		margin-left: 15px
+		max-width: 527px
+		img
+			width: 100%
+			height: auto
+
+.new-tastes
+	background: rgba(#fff, 0.8)
+	padding: 98/16*1rem 20/16*1rem
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		display: block
+		background: $colorContent
+		z-index: -1
+	.wrapper
+		+wrapper(1077px)
+		+flex-justify
+
+	.card
+		max-width: 298px
+		color: $colorContent
+		&-circle
+			display: inline-block
+			width: 31px
+			height: 31px
+			border-radius: 50%
+			background: $colorContent
+			margin-right: 3px
+		&-title
+			font-size: $fsContent
+			line-height: 33.24 /19*1em
+		&-content
+			font-size: $fsSmallContent
+			line-height: 24.93 /17*1em
+
+.cards
+	padding: 88/16*1rem 20/16*1rem
+	background-image: url(../img/cards-bg.png)
+	background-size: cover
+	background-position: center
+	.wrapper
+		+wrapper(1080px)
+		background: rgba(#fff, 0.82)
+		padding-top: 54px
+	.section-title
+		text-align: center
+		margin: 54px 0
+	
+
+
+@import setup/media
