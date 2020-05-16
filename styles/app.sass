@@ -68,12 +68,6 @@ header
 	.large-6
 		max-width: 553px
 		color: #fff
-		.small-title
-			font-size: $fsSmallTitle
-			font-weight: 700
-		.content
-			font-size: $fsContent
-			line-height: 33.33 /19*1em //19px размер шрифта из макета
 	.image
 		margin-left: 83px
 		max-width: 527px
@@ -82,19 +76,8 @@ header
 			height: auto
 
 .new-tastes
-	background: rgba(#fff, 0.8)
 	padding: 96/16*1rem 20/16*1rem 85/16*1rem
-	position: relative
-	&::before
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		display: block
-		background: $colorContent
-		z-index: -1
+	+opacityBackground
 	.wrapper
 		+wrapper(1077px)
 		+flex-justify
@@ -161,6 +144,71 @@ header
 				font-weight: 700
 				text-transform: uppercase
 	
+.made-easy
+	+opacityBackground
+	padding: 91/16*1rem 20/16*1rem 65/16*1rem
+	text-align: center
+	color: $colorContent
+	background: url("../img/made-ease-bg-left.png") left center no-repeat, url("../img/made-ease-bg-right.png") right center no-repeat, rgba(#fff, 0.8)
+	background-size: contain
 
+	.wrapper
+		+wrapper(705px)
+	.circles
+		+flex-justify
+		+wrapper(80px)
+		margin-top: 47/16*1rem
+		margin-bottom: 47/16*1rem
+		.circle
+			width: 23px
+			height: 23px
+			border-radius: 50%
+			background-color: $colorContent
+	.nav
+		list-style: none
+		margin: 0
+		padding: 0
+		+flex-centered
+		a
+			text-decoration: none
+			color: inherit
+			font-weight: 700
+			font-size: $fsSmallContent
+			padding: 26 /17*1em
+
+.menu
+	background: url("../img/menu-bg.png") top center
+	background-size: cover
+	padding-top: 238/16*1rem
+	.container
+		padding: 42/16*1rem 20/16*1rem 64/16*1rem
+		margin: 0 -20/16*1rem
+		background-color: rgba(#fff, 0.8)
+	.section-title
+		text-align: center
+	&-wrapper
+		+wrapper(1164px)
+		+flex-justify
+		flex-wrap: wrap
+	&-item
+		max-width: 408px
+		display: flex
+		align-items: center
+		color: $colorSecondaryContent
+	&-image
+		width: 81px
+		height: 81px
+		border-radius: 50%
+		background-color: #fff
+		+flex-centered
+		flex-shrink: 0
+		margin-right: 8px
+	&-title
+		font-size: $fsCardTitle
+		text-transform: uppercase
+	&-content
+		font-size: $fsSmallContent
+	&-price
+		font-weight: 700
 
 @import setup/media
