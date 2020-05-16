@@ -30,16 +30,18 @@ header
 	background-image: url(../img/hero-bg.png)
 	background-size: cover
 	background-position: center
-	height: 1000 /16*1rem
+	padding: 308/16*1rem 20/16*1rem 220/16*1rem
 	+flex-centered
 
 	.main-title
 		+wrapper(758px)
 		background-color: rgba(#fff, 0.82)
 		text-align: center
-		padding: 119px 0
+		padding: 121/16*1rem 0 118/16*1rem
 		.section-title
 			font-size: $fsMainTitle
+			line-height: 79px
+			margin-bottom: 1rem
 			.beauty-title
 				font-size: $fsBeautyTitle	
 				color: #2c3a42
@@ -52,7 +54,7 @@ header
 		text-transform: uppercase
 		color: #26363a
 		background: #ffffff
-		padding: 16px 25px
+		padding: 7px 24px
 		transition: background, color 0.3s ease-in-out
 		&:hover
 			background: #26363a
@@ -108,10 +110,9 @@ header
 	.wrapper
 		+wrapper(1080px)
 		background: rgba(#fff, 0.82)
-		padding-top: 54px
+		padding-top: 58px
 	.section-title
 		text-align: center
-		margin: 54px 0
 	&-item
 		display: flex
 	.reverse
@@ -120,16 +121,17 @@ header
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
+		margin-top: 45px
 		img
 			width: 100%
 			height: 100%
 		.card
-			max-width: 270px - 104px
+			max-width: 270px - 100px
 			height: 275 /16*1rem
 			+flex-centered
 			flex-direction: column
 			text-align: center
-			padding: 0 52px
+			padding: 0 50px
 			color: $colorSecondaryContent
 			&-image
 				max-width: 270px
@@ -137,6 +139,7 @@ header
 			&-title
 				font-size: $fsCardTitle
 				text-transform: uppercase
+				margin: 0
 			&-content
 				font-size: $fsSmallContent
 			&-price
@@ -146,7 +149,7 @@ header
 	
 .made-easy
 	+opacityBackground
-	padding: 91/16*1rem 20/16*1rem 65/16*1rem
+	padding: 55/16*1rem 20/16*1rem 62/16*1rem
 	text-align: center
 	color: $colorContent
 	background: url("../img/made-ease-bg-left.png") left center no-repeat, url("../img/made-ease-bg-right.png") right center no-repeat, rgba(#fff, 0.8)
@@ -157,8 +160,8 @@ header
 	.circles
 		+flex-justify
 		+wrapper(80px)
-		margin-top: 47/16*1rem
-		margin-bottom: 47/16*1rem
+		margin-top: 38/16*1rem
+		margin-bottom: 43/16*1rem
 		.circle
 			width: 23px
 			height: 23px
