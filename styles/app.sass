@@ -184,34 +184,131 @@ header
 	background-size: cover
 	padding-top: 238/16*1rem
 	.container
-		padding: 42/16*1rem 20/16*1rem 64/16*1rem
+		padding: 45/16*1rem 20/16*1rem 40/16*1rem
 		margin: 0 -20/16*1rem
 		background-color: rgba(#fff, 0.8)
 	.section-title
 		text-align: center
 	&-wrapper
-		+wrapper(1164px)
+		+wrapper(1236px)
 		+flex-justify
 		flex-wrap: wrap
 	&-item
-		max-width: 408px
+		max-width: 472px
 		display: flex
 		align-items: center
 		color: $colorSecondaryContent
+		margin-bottom: 30px
 	&-image
 		width: 81px
 		height: 81px
 		border-radius: 50%
 		background-color: #fff
 		+flex-centered
+		align-self: flex-end
 		flex-shrink: 0
 		margin-right: 8px
 	&-title
 		font-size: $fsCardTitle
 		text-transform: uppercase
+		margin: 28px 0 0
+		letter-spacing: 1px
 	&-content
 		font-size: $fsSmallContent
+		margin: 10px 0 0
 	&-price
 		font-weight: 700
+
+.empty-1
+	background: url(../img/empty-bg1.png) top center
+	background-size: cover
+	height: 889/16*1rem
+.empty-2
+	background: url(../img/empty-bg2.png) top center
+	background-size: cover
+	height: 864/16*1rem
+
+.contact-form
+	background-color: $colorContent
+	color: #ffffff
+	padding: 47/16*1rem 20/16*1rem 71/16*1rem
+	.form-title
+		text-align: center
+		font-size: $fsMainTitle
+		font-weight: 400
+		font-family: $titleFont
+		margin: 0
+	.form
+		+wrapper(1163px)
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		justify-items: center
+		margin-top: 35/16*1rem
+		label
+			font-size: $fsSmallContent
+			font-weight: 700
+			margin-bottom: 44px
+			max-width: 237px
+			width: 100%
+		input
+			display: block
+			background: none
+			border-radius: 8px
+			border: 2px solid #fff
+			max-width: 237px - 20px //width - padding - border (долго тупил)
+			width: 100%
+			padding: 9px 8px
+			color: #ffffff
+			font-size: $fsSmallContent
+			font-family: $contentFont
+			font-weight: 700
+			margin-top: 9px
+			&::placeholder
+				opacity: 1
+			&:focus
+				outline: none
+		label[for="submit"]
+			grid-column: 2/3
+		input[type="submit"]
+			max-width: 237px
+			width: 100%
+			cursor: pointer
+
+.menu-cards
+	+opacityBackground
+	padding: 44/16*1rem 20/16*1rem 122/16*1rem
+	.section-title
+		text-align: center
+	.cards-wrapper
+		+wrapper(1085px)
+		+flex-justify
+		margin-top: 55/16*1rem
+	.card
+		max-width: 339px
+		background: #fff
+		color: #4f4e4e
+		&-text
+			padding: 25px 21px
+		&-date
+			font-size: 14/16*1rem
+			margin-bottom: 24/14*1em
+			letter-spacing: 1.05px
+			font-weight: 700
+			color: #555555
+		&-title
+			font-size: $fsSmallContent
+			font-weight: 700			
+		&-content
+			font-size: $fsSmallContent
+	.read-more
+		display: block
+		text-decoration: none
+		color: #555555
+		font-size: 14/16*1rem
+		margin-top: 25/14*1em
+		font-weight: 700
+		width: 81px
+		text-transform: uppercase
+		border-bottom: 7px solid #ff992b
 
 @import setup/media
