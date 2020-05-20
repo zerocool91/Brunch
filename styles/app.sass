@@ -231,7 +231,7 @@ header
 .contact-form
 	background-color: $colorContent
 	color: #ffffff
-	padding: 47/16*1rem 20/16*1rem 71/16*1rem
+	padding: 33/16*1rem 20/16*1rem 32/16*1rem
 	.form-title
 		text-align: center
 		font-size: $fsMainTitle
@@ -239,15 +239,15 @@ header
 		font-family: $titleFont
 		margin: 0
 	.form
-		+wrapper(1163px)
+		+wrapper(1266px)
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr
 		justify-items: center
-		margin-top: 35/16*1rem
+		margin-top: 13/16*1rem
 		label
 			font-size: $fsSmallContent
 			font-weight: 700
-			margin-bottom: 44px
+			margin-bottom: 40px
 			max-width: 237px
 			width: 100%
 		input
@@ -257,7 +257,7 @@ header
 			border: 2px solid #fff
 			max-width: 237px - 20px //width - padding - border (долго тупил)
 			width: 100%
-			padding: 9px 8px
+			padding: 4/14*1em 8/14*1em
 			color: #ffffff
 			font-size: $fsSmallContent
 			font-family: $contentFont
@@ -273,6 +273,7 @@ header
 			max-width: 237px
 			width: 100%
 			cursor: pointer
+			text-transform: uppercase
 
 .menu-cards
 	+opacityBackground
@@ -282,13 +283,16 @@ header
 	.cards-wrapper
 		+wrapper(1085px)
 		+flex-justify
-		margin-top: 55/16*1rem
+		margin-top: 53/16*1rem
 	.card
 		max-width: 339px
 		background: #fff
 		color: #4f4e4e
+		img	
+			width: 100%
+			height: auto
 		&-text
-			padding: 25px 21px
+			padding: 19px 21px 26px
 		&-date
 			font-size: 14/16*1rem
 			margin-bottom: 24/14*1em
@@ -310,5 +314,70 @@ header
 		width: 81px
 		text-transform: uppercase
 		border-bottom: 7px solid #ff992b
+
+.blockquote
+	text-align: center
+	padding: 30/16*1rem 20/16*1rem 41/16*1rem
+	background: $colorContent
+	color: #ffffff
+	.quote
+		font-size: 83/16*1rem
+		font-weight: 700
+		display: block
+		height: 50px
+		&-text
+			font-size: $fsContent
+			line-height: 33.33/19*1em
+			+wrapper(715px)
+			margin-top: 1rem
+			margin-bottom: 23/16*1rem
+		&-author
+			font-size: $fsContent
+			font-weight: 700
+	.social
+		+flex-justify
+		+wrapper(330px)
+		margin-top: 43px
+		img:hover
+			transform: scale(1.2)
+
+footer
+	max-width: 1400px
+	margin: 0 auto
+	padding: 32/16*1rem 20/16*1rem 81/16*1rem
+	+opacityBackground
+	color: $colorFooter
+	nav
+		display: flex
+	.wrapper
+		+wrapper(1079px)
+		+flex-justify
+		align-items: flex-start
+	.cell-large
+		max-width: 320px
+		margin-right: auto
+	.cell:not(:last-child)
+		margin-right: 118px
+	.footer
+		&-nav
+			+resetList
+		&-title
+			font-size: 25/16*1rem
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 50/16*1rem
+			&_s
+				font-size: 21/16*1rem
+		&-content
+			font-size: $fsContent
+			line-height: 29.17/19*1em
+		&-nav a
+			font-size: 21/16*1rem
+			text-decoration: none
+			color: inherit
+			font-weight: 700
+			line-height: 33/21*1em
+			&:hover
+				text-decoration: underline
 
 @import setup/media

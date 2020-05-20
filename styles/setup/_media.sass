@@ -14,10 +14,25 @@
 @media (max-width: 1119px)
 	.cards .cards-item
 		flex-direction: column
+	
+	.menu-cards .cards-wrapper
+		flex-direction: column
 
 @media (max-width: 856px)
 	.menu .menu-wrapper
 		justify-content: center
+	footer 
+		.wrapper
+			flex-direction: column
+			align-items: center
+		.cell-large
+			margin-left: auto
+			text-align: center
+		nav
+			justify-content: space-around
+			width: 100%
+			.cell
+				margin-right: 0 !important
 
 @media (max-width: 768px)
 	html
@@ -31,6 +46,16 @@
 		.card
 			text-align: center
 			margin-bottom: 20px
+	
+	.contact-form .form
+		grid-template-columns: 1fr 1fr
+
+@media (max-width: 537px)
+	.contact-form .form
+		display: flex
+		flex-direction: column
+		align-items: center
+	
 
 @media (max-width: 375px)
 	html
